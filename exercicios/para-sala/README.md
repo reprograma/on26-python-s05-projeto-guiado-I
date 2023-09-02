@@ -1,7 +1,7 @@
 # Exercício de Sala 🏫  
 
 ## Lojinha Reprograma
-O cliente Mayhhara é uma pessoa bem criativa, ela teve a idéia de criar um sistema para a sua lojinha de doces. Já que ela não sabe como implementar isso pois ela nunca fez um curso da reprograma
+A cliente Mayhhara é uma pessoa bem criativa, ela teve a idéia de criar um sistema para a sua lojinha de doces. Já que ela não sabe como implementar isso pois ela nunca fez um curso da reprograma
 ela decide te chamar para fazer isso pra ela. Um sistema simples vai servir a únicas exigências que ela pede são:
 
 - Deve ser escrito em python
