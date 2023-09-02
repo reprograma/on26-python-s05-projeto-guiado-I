@@ -1,10 +1,18 @@
 # Exercício de Sala 🏫  
 
-## Nome do Exercicio
+## Lojinha Reprograma
+O cliente Mayhhara é uma pessoa bem criativa, ela teve a idéia de criar um sistema para a sua lojinha de doces. Já que ela não sabe como implementar isso pois ela nunca fez um curso da reprograma
+ela decide te chamar para fazer isso pra ela. Um sistema simples vai servir a únicas exigências que ela pede são:
 
-- Explicação do exercício: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci.
-Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. 
+- Deve ser escrito em python
+- Deve conseguir adicionar doces novos ao menu
+- Deve ser possível mostrar detalhes de um produto pelo seu IDENTIFICADOR
+- Deve listar todos os itens do menu
+- Deve ser possível ALTERAR O PREÇO de um certo protudo
+- Deve apagar um produto do menu
+
+**Lembre-se que a Mayhhara é sua primeira cliente. Precisamos causar uma boa impressão e mostrar o n 
+osso trabalho**
 ---
 
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!

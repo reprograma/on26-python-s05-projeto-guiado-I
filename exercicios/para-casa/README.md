@@ -1,12 +1,30 @@
 # Exercício de Casa 🏠 
 
-## Nome do Exercicio
+## E-commerce reprograma
 
-- Explicação do exercício: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci.
-Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Aliquam leo nibh, tempus sed rhoncus et, ultrices vitae orci. Donec erat mauris, laoreet in tortor vel, eleifend suscipit nibh. 
+A Mayhhara ficou maravilhada pelo seu último trabalho com a lojinha, agora ela consegue gerenciar
+os produtos de sua lojinha graças o menu que você criou. Por isso, a May decide pedir a você para criar um outro sistema
+dessa vez, esse sistema vai ter um menu para clientes e os clientes poderão:
+
+- Escolher um produto e adicionar ele a um carrinho
+- O cliente vai poder escolher um produto pelo seu IDENTIFICADOR, esses produtos são os produtos da LOJA e também escolher a quantidade do produto desejado
+- Se o cliente mudar de ideia, ele poderá excluir um produto do carrinho
+- O cliente poderá , a qualquer momento , ver o TOTAL dos itens do seu carrinho
+- O cliente poderá finalizar a compra. Nesse momento , deve ser gerado um número do pedido e o total da compra. Para assim ele finalizar seu carrinho.
+
+Como você fez o curso da reprograma você sabe exatamente o que fazer.
+Agora é hora de ganhar um dinheirinho!
 ---
+### Pro tips:
 
+1. Use o menu da lojinha reprograma e crie um novo menu que será acessado pelos clientes.
+Esse menu chamará algumas funções da loja como por exemplo a lista de produtos. Dessa forma o cliente saberá o item deve ser adicionado ao carrinho
+2. Você pode criar uma função que será o menu do cliente e outra função com os dois menus ( do cliente e da loja)
+EXEMPLO: 
+
+![lojinha](../../assets/print-menu-cliente.jpg)
+Boa sorte!
+---
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
 
 - [ ] Fiz o fork do repositório.
