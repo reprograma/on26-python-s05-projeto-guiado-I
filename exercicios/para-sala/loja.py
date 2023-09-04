@@ -4,10 +4,11 @@
 # Atualizar doce
 # Apagar doces
 # Exibir a lista de todos os doces
+import time
 
-lista_produtos = []
+lista_produtos = [{'id': 3, 'nome': 'asdasdas', 'preço': 32.0}, {'id': 2, 'nome': 'asd', 'preço': 2.0}, {'id': 1, 'nome': 'a', 'preço': 1.0}, {'id': 4, 'nome': '23123', 'preço': 13123.0}]
 
-
+id_produto = 1
 def menu():
     while True:
         print("\n ** MENU LOJA REPROGRAMA **\n")
@@ -35,7 +36,13 @@ def menu():
         else:
             print("Opção inválida, por favor escolha uma opção do menu")
 
+def gerar_id_produto():
+    if len(lista_produtos) == 0:
+        return 1
+    lista_produtos.sort(key=lambda produto: produto.get("id"), reverse=True)
+    novo_id = lista_produtos[0].get("id") + 1
 
+    return novo_id
 def adicionar_produto():
     nome_produto = input("Digite o nome do produto:\n")
     preco_produto = input("Digite o preço do produto:\n")
@@ -45,20 +52,10 @@ def adicionar_produto():
         "nome": nome_produto,
         "preço": float(preco_produto),
     }
-
     lista_produtos.append(produto)
 
     print(lista_produtos)
 
-
-def gerar_id_produto():
-    if len(lista_produtos) == 0:
-        return 1
-    lista_produtos.sort(key=id, reverse=True)
-
-    novo_id = lista_produtos[0].get("id") + 1
-
-    return novo_id
 
 
 def atualizar_produto():
