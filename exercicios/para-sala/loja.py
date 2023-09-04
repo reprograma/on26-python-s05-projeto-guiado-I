@@ -57,14 +57,14 @@ def adicionar_produto():
 
     print(lista_produtos)
 
-def atualizar_produto():
-    id_produto = input("Digite o ID do produto para atualizar:\n")
 
-    for index in range(len(lista_produtos)):
+
+def gerar_id_produto():
         if lista_produtos[index].get("id") == int(id_produto):
             novo_valor = input("Digite o novo valor do produto:\n")
             lista_produtos[index]["preço"] = float(novo_valor)
             print(f"O produto foi atualizado com sucesso! {lista_produtos[index]}")
+
 
 def listar_todos():
     for index in range(len(lista_produtos)):
@@ -72,3 +72,4 @@ def listar_todos():
 
 
 menu()
+
