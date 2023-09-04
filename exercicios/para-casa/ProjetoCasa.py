@@ -9,7 +9,7 @@
 # Ex2.: O usuário digitou um ID de um produto que não existe, como o programa deveria se comportar?
 # Importante: Você tem a liberdade de fazer qualquer alteração no código que ache pertinente, mas lembre-se de sempre justificar.
 
-lista_produtos = [{'id': 3, 'nome': 'asdasdas', 'preço': 32.0}, {'id': 2, 'nome': 'asd', 'preço': 2.0}, {'id': 1, 'nome': 'a', 'preço': 1.0}, {'id': 4, 'nome': '23123', 'preço': 13123.0}] #Esvaziei a lista para despoluir o código
+lista_produtos = [] #Esvaziei a lista para despoluir o código
 
 def menu():
     while True:
