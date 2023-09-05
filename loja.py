@@ -8,20 +8,20 @@
 lista_doces = [] #estrutura de dados tipo lista
                  # ela será nosso objeto iterável dentro do sistema
                  # todas as ações realizadas pelo usuário será baseado nessa lista
-    
+                 #mudei o nome da lista porque está dentro do padrão clean code, sendo mais contextualizada.
 def menu(): #essa função eu deixei com esse nome mesmo porque faz muito sentido
     while True: # ela está nesse loop porque sempre irá aparecer pro cliente a cada vez que for aberto o sistema
         print ("\n ** MENU LOJA REPROGRAMA**\n")
-        print (" 1- Adicionar")
-        print (" 2- Buscar")
-        print (" 3- Listar")
-        print (" 4- Atualizar")
-        print (" 5- Apagar")
-        print (" 0- Sair")
+        print (" 1- Cadastrar um novo doce")
+        print (" 2- Buscar um doce pelo ID")
+        print (" 3- Listar todos os doces do seu banco")
+        print (" 4- Atualizar o preço de um doce")
+        print (" 5- Apagar um doce")
+        print (" 0- Sair do sistema\n") # nessa última linha inseri uma quebra para ficar mais legível para o usuário
         
         opcao_menu = input("Escolha uma função do Menu para realizar: \n") #pede uma entrada ao usuário referente as funcionalidades do menu que ele irá realizar.
         # estrutura condicional if/elif/else que percorre o menu e será
-        #executado a partir do que o usuário escolher. (Mudei para opção Menu, para fazer referência ao Menu dentro do Código)
+        #executado a partir do que o usuário escolher. (Mudei a variável para opção_Menu, para fazer referência ao Menu dentro do Código) (clean code)
         if opcao_menu == "1":
             adicionar_doce()
         elif opcao_menu == "2":
@@ -47,21 +47,23 @@ def adicionar_doce(): # troquei todos os nomes das variáveis dentro dessa funç
     doce = { "id": gerar_id_doce_cadastrado(),"nome": nome_do_doce,"preço":float(preco_do_doce)}
     #função append- utilizada para adicionar a lista de doces principal mais um novo cadastro de um doce
     lista_doces.append(doce)
-    print (lista_doces)
-    #função complementar para quando for selecionada a opção 1 do menu pelo usuário
-    #ela faz com que eseja gerado um id automático pelo sistema
+    print ("\n",lista_doces)
+    #função gerar_id_produto é complementar para quando for selecionada a opção 1 do menu pelo usuário
+    #ela faz com que seja gerado um id automático pelo sistema
     #o id é gerado a partir do último existente e de maior valor + 1. 
     # aqui foi utilizado o método sort + reverse - que inverte a posição dos id do maior para o menor
     #dessa forma quando se é criado um id novo ele vai para o início da lista 
     # então quando a função é chamada esse último id + 1 se torna o id mais recente 
-    #gerado pelo sistema
+    #gerado pelo sistema. a função sort está sendo auxiliada pela lambda, que está fazendo
+    # uma comparação dos ids que já foram gerados ao que estão sendo gerado no momento atual.
 def gerar_id_doce_cadastrado():
-    if len(lista_doces)==0:
+    if len(lista_doces) == 0:
         return 1
-    lista_doces.sort(key=id, reverse=True)
-    
-    novo_id = lista_doces[0].get("id")+1
-    return(novo_id)
+    lista_doces.sort(key=lambda doce:doce.get("id"), reverse=True)
+    novo_id = lista_doces[0].get("id") + 1
+
+    return novo_id
+
     # função atualizar_doce é chamada através do menu pela opção 4
     # está função é responsável por perguntar ao usuário qual item de sua lista principal
     #ele quer atualizar o atributo preço, deste item. 
@@ -98,13 +100,13 @@ def listar_todos_doces():
 # a função exclui atravel do método del(), esse item da lista principal.  
 # depois exibe a lista principal atualizada.    
 def excluir_doces():
-    id_produto_del = int(input("Digite o ID do doce que você quer excluir: \n"))
-    for index in range(len(lista_doces)):
-        if lista_doces[index].get("id")== int(id_produto_del):
-            del (lista_doces[index])
+        id_produto_del = (input("Digite o ID do doce que você quer excluir: \n"))
+        for index in range(len(lista_doces)):
+            if index < len(lista_doces):
+                if lista_doces[index].get("id")== int(id_produto_del):
+                    del (lista_doces[index])
+                    print (f"Doce deletado com sucesso! -- LISTA ATUAL: {lista_doces}")
             
-            
-        print("Doce Removido com Sucesso ",lista_doces)
 # a função buscar_doce é chamada através da opção 2 do menu
 # o usuário pode utilizar ela para buscar dados de um item específico que está cadastrado
 #na lista principal.
