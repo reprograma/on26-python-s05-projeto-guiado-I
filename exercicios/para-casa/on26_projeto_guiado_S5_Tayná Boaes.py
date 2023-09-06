@@ -1,4 +1,3 @@
-
 lista_doces=[{'Nome': 'Mousse de Cupuaçu', 'Preço': 5.0 , 'id': 0}, {'Nome': 'Sorverte de Tucumã', 'Preço': 8.0 , 'id': 1}, {'Nome': 'Bala de castanha', 'Preço': 9.0 , 'id': 2}]
 
 def menu():
