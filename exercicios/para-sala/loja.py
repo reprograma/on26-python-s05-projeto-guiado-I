@@ -8,12 +8,14 @@
 
 import time
 
-lista_produtos = [{'id': 3, 'nome': 'chocolate', 'preço': 8.0}, {'id': 2, 'nome': 'chocolate', 'preço': 8.0}, {'id': 1, 'nome': 'amora', 'preço': 5.0}, {'id': 4, 'nome': 'pudim', 'preço': 9.0}]
+#lista que não está armazenando valores, esse eu coloquei manualmente, mas percebi que os valores que coloco só fica no terminal
+lista_produtos = [{'id': 1, 'nome': 'mor', 'preço': 8.0}]
 
-id_produto_del = ()
+id_produto_del = 'id'
 
 id_produto = 1
 
+#função de menu sendo repetida diversas vezes pelo while, direcionando o usuario para cada opção que ele deseja
 def menu():
     while True:
         print("/n ** MENU LOJA REPROGRAMA **")
@@ -28,14 +30,15 @@ def menu():
 
         print(opcao)
 
+#ifs que dão as opções para direcionar o usuario de forma numeria para cada função a ser executada
         if opcao == "1":
             adicionar_produto()
         elif opcao == "2":
-            print("opcao exibir detalhes do doce") #fazer
+            exibir_detalhes()
         elif opcao == "3":
             atualizar_produto()
         elif opcao == "4":
-            deletar_produto()
+            deletar_produto()    
         elif opcao == "5":
             listar_todos()
         elif opcao == "0":
@@ -46,6 +49,7 @@ def menu():
     
      #As ações do programa       
 
+#Gerador de ID por ordem crescente, começando do numero 1.
 def gerar_id_produto():
     if len(lista_produtos) == 0:
         return 1
@@ -54,6 +58,7 @@ def gerar_id_produto():
 
     return novo_id
 
+#Adiciona os produtos e mostra as especificações que o usuário precisa preencher
 def adicionar_produto():
     nome_produto = input("Digite o nome do produto:\n")
     preco_produto = input("Digite o preço do produto:\n")
@@ -67,6 +72,16 @@ def adicionar_produto():
 
     print(lista_produtos)
 
+#Estou com muita dificuldade em fazer a função funcionar, não sei o que acontece que parece que ela não conversa com o "if" de lá de cima, nunca funciona de primeira.
+def exibir_detalhes():
+    nome_produto = input("Digite o nome do produto:\n")
+    
+    for index in range(len('nome')):
+        print(f"{lista_produtos['nome']}\n")
+
+
+
+#Função que localiza o item de o acordo com a chave especifica 'id' e localiza na lista substituindo por outro input.
 def atualizar_produto():
     id_produto = input("Digite o ID do produto para atualizar:\n")
 
@@ -77,16 +92,19 @@ def atualizar_produto():
             print(f"O produto foi atualizado com sucesso! {lista_produtos[index]}")
 
 
+#Função que deleta valores da lista. Não consegui escrever mensagens de erro e exluir o item correto, tentei e pesquisei os tipos mais comuns de deletar item da lista,
+#mas sem sucesso, a minha lista não armazena valores.
+
 def deletar_produto():
-    id_produto = input("Digite o ID do produto para deletar:\n")
+    id_produto_del = input("Digite o ID do produto que quer excluir:\n")
 
-    lista_produtos.remove(id_produto)
-    print(f"O produto foi removido com sucesso:\n")
+    lista_produtos.remove(id_produto_del == 'id:\n')
+    print(f"O produto foi deletado com sucesso!")
 
-
+#Exibi a lista toda, com todos os produtos armazenados.
 def listar_todos():
     for index in range(len(lista_produtos)):
         print(f"{lista_produtos[index]}\n")
 
-
+#inseri o menu novamente, mostrando todas a s opções.
 menu()
