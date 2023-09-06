@@ -44,6 +44,4 @@ def remover_doce():
 
             
 
-    
-
 menu()
