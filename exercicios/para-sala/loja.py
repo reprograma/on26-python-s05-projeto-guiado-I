@@ -72,5 +72,16 @@ def listar_todos():
     for index in range(len(lista_produtos)):
         print(f"{lista_produtos[index]}\n")
 
+        
+def apagar_produto():
+    id_produto = int(input("Determine o produto apagado"))
+    for index in range(len(lista_produtos)):
+         if index < len/(lista_produtos):
+            if id_produto == lista_produtos[index].get("id"):
+                lista_produtos.pop(index)
+                print(f"Produto: {id_produto } Produto excluido")
+
+
+
 
 menu()
