@@ -71,6 +71,3 @@ def atualizar_produto():
 def listar_todos():
     for index in range(len(lista_produtos)):
         print(f"{lista_produtos[index]}\n")
-
-
-menu()
