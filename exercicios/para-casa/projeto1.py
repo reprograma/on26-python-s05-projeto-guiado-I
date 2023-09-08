@@ -1,5 +1,5 @@
 # CRUD = CREATE, READE, UPDATE, DELETE
-
+# LOJA DE DOCES
 
 import time
 
@@ -11,6 +11,7 @@ lista_produtos = [
     ]
 
 cod_produto = 1
+
 def menu():
     while True:
         print("\n ** MENU LOJA REPROGRAMA **\n")
@@ -26,7 +27,7 @@ def menu():
         if opcao == "1":
             adicionar_produto()
         elif opcao == "2":
-            print("opcao exibir detalhes doce")
+            exibir_detalhes()
         elif opcao == "3":
             atualizar_produto()
         elif opcao == "4":
@@ -38,6 +39,7 @@ def menu():
         else:
             print("Opção inválida, por favor escolha uma opção do menu")
 
+
 def gerar_cod_produto():
     if len(lista_produtos) == 0:
         return 1
@@ -45,6 +47,8 @@ def gerar_cod_produto():
     novo_cod = lista_produtos[0].get("COD") + 1
 
     return novo_cod
+
+
 def adicionar_produto():
     nome_produto = input("Digite o nome do produto:\n")
     preco_produto = input("Digite o preço do produto:\n")
@@ -57,7 +61,6 @@ def adicionar_produto():
     lista_produtos.append(produto)
 
     print(lista_produtos)
-
 
 
 def atualizar_produto():
@@ -73,6 +76,17 @@ def atualizar_produto():
 def listar_todos():
     for index in range(len(lista_produtos)):
         print(f"{lista_produtos[index]}\n")
+
+
+def exibir_detalhes():
+    cod_doce = input("Forneça o código do produto: ")
+    for produto in lista_produtos:
+        if produto.get("COD") == int(cod_doce):
+            print(produto)
+            break
+        
+
+
 
 
 menu()
