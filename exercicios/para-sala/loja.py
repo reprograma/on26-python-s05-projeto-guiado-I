@@ -1,14 +1,20 @@
-# Quero opção de:
-# Adicionar doce
-# Exibir detalhe de um doce
-# Atualizar doce
-# Apagar doces
-# Exibir a lista de todos os doces
-import time
-
-lista_produtos = [{'id': 3, 'nome': 'asdasdas', 'preço': 32.0}, {'id': 2, 'nome': 'asd', 'preço': 2.0}, {'id': 1, 'nome': 'a', 'preço': 1.0}, {'id': 4, 'nome': '23123', 'preço': 13123.0}]
+lista_produtos = [
+    {"id": 3, "nome": "asdasdas", "preço": 32.0},
+    {"id": 2, "nome": "asd", "preço": 2.0},
+    {"id": 1, "nome": "a", "preço": 1.0},
+    {"id": 4, "nome": "23123", "preço": 13123.0},
+]
 
 id_produto = 1
+
+"""sumary_line
+
+Keyword arguments:
+argument -- description
+Return: return_description
+"""
+
+
 def menu():
     while True:
         print("\n ** MENU LOJA REPROGRAMA **\n")
@@ -24,17 +30,18 @@ def menu():
         if opcao == "1":
             adicionar_produto()
         elif opcao == "2":
-            print("opcao exibir detalhes doce")
+            exibir_detalhes()
         elif opcao == "3":
             atualizar_produto()
         elif opcao == "4":
-            print("opcao apagar doce")
+            deletar()
         elif opcao == "5":
             listar_todos()
         elif opcao == "0":
             break
         else:
             print("Opção inválida, por favor escolha uma opção do menu")
+
 
 def gerar_id_produto():
     if len(lista_produtos) == 0:
@@ -43,7 +50,9 @@ def gerar_id_produto():
     novo_id = lista_produtos[0].get("id") + 1
 
     return novo_id
-def adicionar_produto():
+
+
+def adicionar_produto(abc):
     nome_produto = input("Digite o nome do produto:\n")
     preco_produto = input("Digite o preço do produto:\n")
 
@@ -57,7 +66,6 @@ def adicionar_produto():
     print(lista_produtos)
 
 
-
 def atualizar_produto():
     id_produto = input("Digite o ID do produto para atualizar:\n")
 
@@ -69,8 +77,25 @@ def atualizar_produto():
 
 
 def listar_todos():
-    for index in range(len(lista_produtos)):
-        print(f"{lista_produtos[index]}\n")
+    for produto in lista_produtos:
+        print(f"{produto}\n")
+
+
+def exibir_detalhes():
+    id_doce = input("forneça o ID do produto:\n")
+    for produto in lista_produtos:
+        if produto.get("id") == int(id_doce):
+            print(produto)
+            break
+
+
+def deletar():
+    id_produto = input("Digite o ID do produto para deletar:\n")
+
+    for produto in lista_produtos:
+        if produto.get("id") == int(id_produto):
+            lista_produtos.remove(produto)
+            break
 
 
 menu()
