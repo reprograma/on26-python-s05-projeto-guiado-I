@@ -31,7 +31,7 @@ def menu():
         elif opcao == "3":
             atualizar_produto()
         elif opcao == "4":
-            print("opcao apagar doce")
+            deletar()
         elif opcao == "5":
             listar_todos()
         elif opcao == "0":
@@ -86,7 +86,12 @@ def exibir_detalhes():
             break
         
 
-
+def deletar():
+    cod_produto =input("Digite o código do produto para deletar: ")
+    for produto in lista_produtos:
+        if produto.get("COD") == int(cod_produto):
+            lista_produtos.remove(produto)
+            break      #para não ter que passar por todos os itens
 
 
 menu()
