@@ -40,17 +40,17 @@ def menu():
 
 #Condições que determinam a ação desejada pelo usuário, retornando as outras funções
 #deixei como foi passado acrecento as funções que estavam faltando, pois o restante fazia sentido
-        if opcao == "1":
+        if opcao == 1:
             adicionar_produto()
-        elif opcao == "2":
+        elif opcao == 2:
             exibir_produtos()
-        elif opcao == "3":
+        elif opcao == 3:
             atualizar_produto()
-        elif opcao == "4":
+        elif opcao == 4:
             apagar_produto()
-        elif opcao == "5":
+        elif opcao == 5:
             listar_todos()
-        elif opcao == "0":
+        elif opcao == 0:
             break #Sair do loop do menu.
         else:
             print("Opção inválida, por favor escolha uma opção do menu")
