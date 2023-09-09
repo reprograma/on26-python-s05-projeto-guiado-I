@@ -1,5 +1,5 @@
-# CRUD = CREATE, READE, UPDATE, DELETE
-# LOJA DE DOCES
+'''CRUD = CREATE, READE, UPDATE, DELETE
+Loja de Doces da Mayhara'''
 
 import time
 
@@ -40,6 +40,8 @@ def menu():
             print("Opção inválida, por favor escolha uma opção do menu")
 
 
+''' Essa função tem a finalidade de gerar o código de um doce
+'''
 def gerar_cod_produto():
     if len(lista_produtos) == 0:
         return 1
@@ -49,6 +51,8 @@ def gerar_cod_produto():
     return novo_cod
 
 
+''' Essa função tem a finalidade de adicionar um doce a loja
+'''
 def adicionar_produto():
     nome_produto = input("Digite o nome do produto:\n")
     preco_produto = input("Digite o preço do produto:\n")
@@ -63,6 +67,8 @@ def adicionar_produto():
     print(lista_produtos)
 
 
+''' Essa função tem a finalidade de atualizar o preço de um doce
+'''
 def atualizar_produto():
     cod_produto = input("Digite o código do produto para atualizar:\n")
 
@@ -73,11 +79,15 @@ def atualizar_produto():
             print(f"O produto foi atualizado com sucesso! {lista_produtos[index]}")
 
 
+''' Essa função tem a finalidade de listar todos os produtos da cadastrados na loja
+'''
 def listar_todos():
     for index in range(len(lista_produtos)):
         print(f"{lista_produtos[index]}\n")
 
 
+''' Essa função tem a finalidade de exibir o detalhe de um produto
+'''
 def exibir_detalhes():
     cod_doce = input("Forneça o código do produto: ")
     for produto in lista_produtos:
@@ -85,13 +95,14 @@ def exibir_detalhes():
             print(produto)
             break
         
-
+''' Essa função tem a finalidade de deletar um produto cadastrado
+'''
 def deletar():
     cod_produto =input("Digite o código do produto para deletar: ")
     for produto in lista_produtos:
         if produto.get("COD") == int(cod_produto):
             lista_produtos.remove(produto)
-            break      #para não ter que passar por todos os itens
+            break      
 
 
 menu()
