@@ -1,0 +1,94 @@
+# Quero opção de:
+# Adicionar doce
+# Exibir detalhe de um doce
+# Atualizar doce
+# Apagar doces
+# Exibir a lista de todos os doces
+
+#import time - retirei a opção import time
+
+#Acredito que programa entrega o solicitado pela cliente, porém, adicionaria mais funções para que seja mais completo. 
+#Entendendo o nível de compreensão do usuário na usabilidade do programa e está dentro do escopo proposto. 
+lista_produtos = []
+
+id_produto = 1
+def menu():
+    while True:
+        print("\n ** MENU LOJA REPROGRAMA **\n")
+        print("1 - Adicionar")
+        print("2 - Exibir detalhes")
+        print("3 - Atualizar")
+        print("4 - Apagar")
+        print("5 - Exibir todos")
+        print("6 - Deletar item")
+        print("0 - Sair")
+
+        opcao = input("Escolha a opção desejada\n")
+#Não adicionei mais funções pelo fato de ficar mais confuso o programa para a cliente. 
+        if opcao == "1": 
+            adicionar_produto()
+        elif opcao == "2":
+            print("opcao exibir detalhes doce")
+        elif opcao == "3":
+            atualizar_produto()
+        elif opcao == "4":
+            print("opcao apagar doce")
+        elif opcao == "5":
+            listar_todos()
+        elif opcao == "6": #adicionei a opção, testei e ela não aparece no menu final
+            print("opcao deletar item")    
+        elif opcao == "0":
+            break #compreendi que o break para não entrar no loop infinito (seja while, laço de repetição)
+        else:
+            print("Opção inválida, por favor escolha uma opção do menu")
+
+def gerar_id_produto():
+    if len(lista_produtos) == 0: #Len é útil quando você precisa saber o tamanho de uma sequência para realizar operações.
+        return 1
+    lista_produtos.sort(key=lambda produto: produto.get("id"), reverse=True) #Compreendi sobre a função sort porém não combinada com key=lambda).
+    novo_id = lista_produtos[0].get("id") + 1
+
+    return novo_id
+def adicionar_produto():
+    nome_produto = input("Digite o nome do produto:\n")
+    preco_produto = input("Digite o preço do produto:\n")
+
+    produto = {
+        "id": gerar_id_produto(),
+        "nome": nome_produto,
+        "preço": float(preco_produto),
+    }
+    lista_produtos.append(produto)
+
+    print(lista_produtos)
+
+
+
+def atualizar_produto():
+    id_produto = input("Digite o ID do produto para atualizar:\n")
+
+    for index in range(len(lista_produtos)):
+        if lista_produtos[index].get("id") == int(id_produto):
+            novo_valor = input("Digite o novo valor do produto:\n")
+            lista_produtos[index]["preço"] = float(novo_valor)
+            print(f"O produto foi atualizado com sucesso! {lista_produtos[index]}")
+
+
+def listar_todos():
+    for index in range(len(lista_produtos)): #adicionado o len
+        print(f"{lista_produtos[index]}\n")
+
+def apagar_doce():
+    id_produto = input("Digite o ID do produto para apagar:\n")
+    
+    for produto in lista_produtos:
+        if produto.get("id") == int(id_produto): #o get é a forma mais segura do código não quebrar e acessar um dicionário externo.
+            lista_produtos.remove(produto)
+
+            print(f"Produto com ID {id_produto} foi apagado com sucesso.")
+            return
+    
+    print(f"Produto com ID {id_produto} não encontrado na lista.")
+
+
+menu()
