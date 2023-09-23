@@ -40,7 +40,10 @@ def menu():
 
 #Condições que determinam a ação desejada pelo usuário, retornando as outras funções
 #deixei como foi passado acrecento as funções que estavam faltando, pois o restante fazia sentido
+<<<<<<< HEAD
 #match case trocar 
+=======
+>>>>>>> 59c83df8d28f33b62f1313fd841ce723dd4676fb
         if opcao == 1:
             adicionar_produto()
         elif opcao == 2:
