@@ -40,17 +40,18 @@ def menu():
 
 #Condições que determinam a ação desejada pelo usuário, retornando as outras funções
 #deixei como foi passado acrecento as funções que estavam faltando, pois o restante fazia sentido
-        if opcao == "1":
+#match case trocar 
+        if opcao == 1:
             adicionar_produto()
-        elif opcao == "2":
+        elif opcao == 2:
             exibir_produtos()
-        elif opcao == "3":
+        elif opcao == 3:
             atualizar_produto()
-        elif opcao == "4":
+        elif opcao == 4:
             apagar_produto()
-        elif opcao == "5":
+        elif opcao == 5:
             listar_todos()
-        elif opcao == "0":
+        elif opcao == 0:
             break #Sair do loop do menu.
         else:
             print("Opção inválida, por favor escolha uma opção do menu")
@@ -106,8 +107,8 @@ def exibir_produtos():
     Caso contrário, exibe uma mensagem indicando que o produto não foi encontrado.
     """
     encontrado = False  # Inicialize a variável de controle como False, para que não imprima "não encotrado", quando estiver buscando o "id" do produto.
-# Tratamento para aceitar apenas números inteiros como opções do ID.
-# Enquanto a opção não for um número inteiro, o programa continuará pedindo uma escolha válida.
+#Tratamento para aceitar apenas números inteiros como opções do ID.
+#Enquanto a opção não for um número inteiro, o programa continuará pedindo uma escolha válida.
     while True:
         try:
             id_recebido = int(input("Qual é o ID do produto?\n"))
@@ -121,7 +122,7 @@ def exibir_produtos():
             print(f"ID: {produto['id']}")
             print(f"Nome: {produto['nome']}")
             print(f"Preço: R$ {produto['preço']:.2f}")
-            encontrado = True  # Defina a variável de controle como True quando o produto é encontrado
+            encontrado = True  #Defina a variável de controle como True quando o produto é encontrado
             break#Sair do loop assim que produto é encontrado e impresso
         
     if not encontrado:#  # Se a variável 'encontrado' for False, significa que o produto não foi encontrado na lista.
