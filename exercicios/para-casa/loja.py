@@ -7,15 +7,28 @@ lista_produtos = [
 
 id_produto = 1
 
-"""sumary_line
-
-Keyword arguments:
-argument -- description
-Return: return_description
-"""
-
 
 def menu():
+    """
+    Essa função executa o menu no programa
+
+    Args:
+       **None**
+
+    Returns:
+        str: value
+
+    Exemplo de uso:
+        >>> menu(1)
+         ** MENU LOJA REPROGRAMA **
+
+            1 - Adicionar\n
+            2 - Exibir detalhes\n
+            3 - Atualizar\n
+            4 - Apagar\n
+            5 - Exibir todos\n
+            0 - Sair\n
+    """
     while True:
         print("\n ** MENU LOJA REPROGRAMA **\n")
         print("1 - Adicionar")
