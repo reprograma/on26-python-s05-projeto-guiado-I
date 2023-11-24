@@ -1,28 +1,27 @@
 # Exercício de Casa 🏠 
 
-## E-commerce reprograma
+## Continuação do projeto da loja
 
-A Mayhhara ficou maravilhada pelo seu último trabalho com a lojinha, agora ela consegue gerenciar
-os produtos de sua lojinha graças o menu que você criou. Por isso, a May decide pedir a você para criar um outro sistema
-dessa vez, esse sistema vai ter um menu para clientes e os clientes poderão:
+Como Desafio para casa você vai precisar fazer o seguinte:
+- Utilizar o código feito na aula e implementar as seguintes funcionalidades restantes:
+  - mostrar os detalhes de um produto. Para isso, quando o usuário digitar o ID do produto escolhido, você deve encontrar o item e exibir apenas o item selecionado por ele.
+  - deletar um item da lista de produtos. Dado um ID de um produto fornecido pelo usuário você deve apagar o item da lista de produtos.
+- Usando o código completo com todos os requisitos implementados corretamente, chegou a hora de melhorar o seu código, você deve:
+  - Encontrar pontos de melhorias no código se achar necessário, explicar as mudanças e também o porquê de terem alterado o código. Você adicionará um comentário para explicar o que a função faz e como ela faz e o que sua mudança provoca de melhoria em comparação com o código original
+- Todas as funções DEVEM ser funcionais. Você pode adicionar fluxos de condição , tratativas de erro e também mensagens informativas para possíveis comportamentos inesperados do cliente
+  - Ex.: Usuário precisa digitar um valor X mas ele acaba digitando Y. Então você deve auxiliar o usuário onde ele cometeu esse erro e o que ele precisa fazer para corrigir.
+  - Ex2.: O usuário digitou um ID de um produto que não existe, como o programa deveria se comportar?
 
+<<<<<<< HEAD
 - Escolher um produto e adicionar ele a um carrinho
 - O cliente vai poder escolher um produto pelo seu id, esses produtos são os produtos da LOJA e também escolher a quantidade do produto desejado
 - Se o cliente mudar de ideia, ele poderá excluir um produto do carrinho
 - O cliente poderá , a qualquer momento , ver o TOTAL dos itens do seu carrinho
 - O cliente poderá finalizar a compra. Nesse momento , deve ser gerado um número do pedido e o total da compra. Para assim ele finalizar seu carrinho.
+=======
+**Importante:** Você tem a liberdade de fazer qualquer alteração no código que ache pertinente, mas lembre-se de sempre justificar.
+>>>>>>> 71ccbf2148d163eadc1fad54feac13c256161c4e
 
-Como você fez o curso da reprograma você sabe exatamente o que fazer.
-Agora é hora de ganhar um dinheirinho!
----
-### Pro tips:
-
-1. Use o menu da lojinha reprograma e crie um novo menu que será acessado pelos clientes.
-Esse menu chamará algumas funções da loja como por exemplo a lista de produtos. Dessa forma o cliente saberá o item deve ser adicionado ao carrinho
-2. Você pode criar uma função que será o menu do cliente e outra função com os dois menus ( do cliente e da loja)
-EXEMPLO: 
-
-![lojinha](../../assets/print-menu-cliente.jpg)
 Boa sorte!
 ---
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
