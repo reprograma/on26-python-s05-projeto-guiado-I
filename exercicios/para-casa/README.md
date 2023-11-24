@@ -7,7 +7,7 @@ os produtos de sua lojinha graças o menu que você criou. Por isso, a May decid
 dessa vez, esse sistema vai ter um menu para clientes e os clientes poderão:
 
 - Escolher um produto e adicionar ele a um carrinho
-- O cliente vai poder escolher um produto pelo seu IDENTIFICADOR, esses produtos são os produtos da LOJA e também escolher a quantidade do produto desejado
+- O cliente vai poder escolher um produto pelo seu id, esses produtos são os produtos da LOJA e também escolher a quantidade do produto desejado
 - Se o cliente mudar de ideia, ele poderá excluir um produto do carrinho
 - O cliente poderá , a qualquer momento , ver o TOTAL dos itens do seu carrinho
 - O cliente poderá finalizar a compra. Nesse momento , deve ser gerado um número do pedido e o total da compra. Para assim ele finalizar seu carrinho.

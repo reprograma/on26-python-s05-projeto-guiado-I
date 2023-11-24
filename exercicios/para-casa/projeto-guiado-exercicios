@@ -1,0 +1,77 @@
+# Deve conseguir adicionar doces novos ao menu
+# Deve ser possível mostrar detalhes de um produto pelo seu index
+# Deve listar todos os itens do menu
+# Deve ser possível alterar o preço de um certo produto
+# Deve apagar um produto do menu
+
+# 1. Criar o menu
+
+doces_cadastrados = []
+
+def menu ():
+    # adicionar doce
+    # detalhar doce
+    # listar todos os itens
+    # alterar preço
+    # apagar produto
+    while True:
+
+        print("\n ** MENU LOJA MAY ** ")
+        print("1 - Adicionar produto")
+        print("2 - Exibir detalhes de um produto")
+        print("3 - Atualizar informações de um produto")
+        print("4 - Remover produto")
+        print("5 - Listar todos os produtos")
+        print("0 - Sair")
+
+        opcao = input("Digite a opção desejada:\n")
+
+
+        if opcao == "1":
+            adicionar_produto()
+
+        elif opcao == "2":
+            print("Opção exibir detalhes de um produto.")
+
+        elif opcao == "3":
+            print("Opção atualizar informações de um produto.")
+
+        elif opcao == "4":
+            print("Opção remover produto.")
+
+        elif opcao == "5":
+            print("Opção listar todos os produtos.")
+
+        elif opcao == "0":
+            print("Sair")
+            break
+
+        else:
+            print ("Opcão inválida. Por favor, digite uma das opções informadas.")
+
+
+def adicionar_produto():
+    nome_produto = input("Informe o nome do produto que deseja adicionar:\n")
+    preco_produto = input("Informe o preço do produto que deseja adicionar:\n")
+
+    produto = {
+        "id": gerar_id_produto(),
+        "nome": nome_produto,
+        "preço": float(preco_produto),
+    }
+
+    doces_cadastrados.append(produto)
+    print(doces_cadastrados)
+
+  
+def gerar_id_produto():
+    novo_id = 1
+    if len(doces_cadastrados) == 0:
+        return 1
+
+    doces_cadastrados.sort(key=id, reverse=True)
+    novo_id = doces_cadastrados[0].get("id") + 1
+    return novo_id
+
+
+menu()

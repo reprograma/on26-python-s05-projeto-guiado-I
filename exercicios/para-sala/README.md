@@ -6,13 +6,13 @@ ela decide te chamar para fazer isso pra ela. Um sistema simples vai servir, as 
 
 - Deve ser escrito em python
 - Deve conseguir adicionar doces novos ao menu
-- Deve ser possível mostrar detalhes de um produto pelo seu IDENTIFICADOR
+- Deve ser possível mostrar detalhes de um produto pelo seu id
 - Deve listar todos os itens do menu
 - Deve ser possível ALTERAR O PREÇO de um certo protudo
 - Deve apagar um produto do menu
 
-**Lembre-se que a Mayhhara é sua primeira cliente. Precisamos causar uma boa impressão e mostrar o n 
-osso trabalho**
+**Lembre-se que a Mayhhara é sua primeira cliente. Precisamos causar uma boa impressão e mostrar 
+o nosso trabalho**
 ---
 
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
